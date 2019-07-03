@@ -1,0 +1,13 @@
+<h1> Primer Formulario</h1>
+<form>
+  <label>Nombre de usuario:
+    <input type="text" class="form-control" #usernameField  [placeholder] = 'placeholder.username'>
+
+  </label>
+  <br>
+  <label>
+    <br>
+    <input type="button" (click)="recibirDatos(usernameField, usernamePass);"  class='btn btn-primary' #sendButton value='Aceptar'>
+  </label>
+
+</form>
