@@ -1,14 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'anfo-form01',
+  selector: 'app-form01',
   templateUrl: './form01.component.html',
   styleUrls: ['./form01.component.scss']
 })
 export class Form01Component implements OnInit {
 
-  constructor() {}
+  nombreRecibido = '';
+  passwordRecibida = '';
 
+  placeholder = {
+    username: 'teclea tu nombre',
+    userpass: 'teclea tu password'
+  };
+  constructor() { }
+
+  recibirDatos(nombre, password) {
+    this.nombreRecibido = nombre.value;
+    this.passwordRecibida = password.value;
+  }
   ngOnInit() {
   }
 
