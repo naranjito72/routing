@@ -1,15 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { Form01Component } from './myforms/form01/form01.component';
+import { HomeComponent } from './commons/home/home.component';
 
 const routes: Routes = [
-  /*añadimos las rutas */
+  {path: 'home', component: HomeComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: 'myform01', component: Form01Component},
-  {path: 'myform01',
-
-   loadChildren: () => import ('./myforms/form01/form01.component').then(mod => mod.Form01Component)}
-
+  {path: 'forms', loadChildren: () => import('./my-forms/my-forms.module').then(mod => mod.MyFormsModule)}
 ];
 
 @NgModule({
